@@ -1,0 +1,22 @@
+@import 'client/components/App/global_vars';
+
+$podcast-category-padding: 15px;
+
+.podcastCategory {
+  max-width: $main-content-width;
+  margin: 0 30px;
+
+  h2 {
+    color: #0AB2F1;
+    border-bottom: 1px solid #bbb;
+    padding-bottom: $podcast-category-padding;
+  }
+
+  .podcastList {
+    border-bottom: 1px solid #bbb;
+    margin-bottom: 50px;
+    padding-bottom: $podcast-category-padding;
+    padding-top: $podcast-category-padding;
+  }
+
+}

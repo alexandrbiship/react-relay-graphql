@@ -1,0 +1,43 @@
+// @import 'client/components/App/global_vars';
+
+$tile-width: 420px;
+$tile-height: 360px;
+$tile-gap: 11px;
+
+@mixin genTile {
+  display: flex;
+  flex-direction: column;
+  width: $tile-width;
+  height: $tile-height;
+  padding: 45px;
+  color: #fff;
+  background-size: 425px 360px;
+
+  .heading {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    a {
+      color: #fff;
+    }
+
+    h2 {
+      display: flex;
+      align-self: left;
+    }
+  }
+
+  .tileItems {
+    margin-top: 25px;
+  }
+
+  @media screen and (max-width: 375px) {
+    padding: 35px;
+    width: 375px;
+  }
+
+  @media screen and (max-width: 320px) {
+    width: 320px;
+  }
+}

@@ -1,0 +1,6 @@
+@import 'client/components/App/global_vars';
+
+.mediaItem {
+  @include mediaItem;
+
+}

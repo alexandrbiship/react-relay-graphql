@@ -1,0 +1,17 @@
+@import 'client/components/App/global_vars';
+
+.mediaItem {
+  @include mediaItem;
+
+  a {
+    color: #fff;
+
+    &:hover {
+      color: #fff;
+    }
+
+    .item .info .center {
+      width: 190px;
+    }
+  }
+}

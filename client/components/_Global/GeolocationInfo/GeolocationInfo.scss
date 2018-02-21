@@ -1,0 +1,14 @@
+.geolocationInfo {
+  font-size: 10px;
+  font-weight: bold;
+  display: inline-block;
+
+  .icon {
+    height: 14px;
+  }
+  .cityName {
+    line-height: 12px;
+    vertical-align: top;
+    padding-left: 10px;
+  }
+}

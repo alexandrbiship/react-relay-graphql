@@ -1,0 +1,74 @@
+{
+  "presets": [
+    "es2015",
+    "react",
+    "stage-0"
+  ],
+  "env": {
+    "development": {
+      "plugins": [
+        ["transform-object-rest-spread"],
+        [
+          "css-modules-transform", {
+            "devMode": true,
+            "extensions": [".css", ".scss", ".less"],
+            "generateScopedName": "[name]__[local]___[hash:base64:5]",
+            "preprocessCss": "./processSass.js",
+            "extractCss": "./public/styles.css"
+          }
+        ],
+        [
+          "module-resolver", {
+            "root": [
+              "./"
+            ]
+          }
+        ],
+        ["relay"]
+      ]
+    },
+    "stage": {
+      "plugins": [
+        ["transform-object-rest-spread"],
+        [
+          "css-modules-transform", {
+            "devMode": true,
+            "extensions": [".css", ".scss", ".less"],
+            "generateScopedName": "[name]__[local]___[hash:base64:5]",
+            "preprocessCss": "./processSass.js",
+            "extractCss": "./public/styles.css"
+          }
+        ],
+        [
+          "module-resolver", {
+            "root": [
+              "./"
+            ]
+          }
+        ],
+        ["relay"]
+      ]
+    },
+    "production": {
+      "plugins": [
+        ["transform-object-rest-spread"],
+        [
+          "css-modules-transform", {
+            "devMode": true,
+            "extensions": [".css", ".scss", ".less"],
+            "generateScopedName": "[name]__[local]___[hash:base64:5]",
+            "preprocessCss": "./processSass.js"
+          }
+        ],
+        [
+          "module-resolver", {
+            "root": [
+              "./"
+            ]
+          }
+        ],
+        ["relay"]
+      ]
+    }
+  }
+}

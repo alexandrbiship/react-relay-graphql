@@ -1,0 +1,38 @@
+.latestMusicNews {
+  border: 1px solid #bbbbbb;
+  height: 413px;
+  padding: 27px;
+  width: 354px;
+
+  h2 {
+    font-size: 18px;
+    align-self: left;
+    margin-bottom: 9px;
+  }
+
+  ul li {
+    align-items: center;
+    padding-top: 9px;
+    padding-bottom: 9px;
+
+    a {
+      display: block;
+      width: 300px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+}
+
+@media screen and (max-width: 374px) {
+  .latestMusicNews {
+    height: initial;
+    padding: 35px;
+    width: 320px;
+
+    ul li a {
+      width: 250px;
+    }
+  }
+}

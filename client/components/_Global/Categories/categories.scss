@@ -1,0 +1,125 @@
+@import 'client/components/App/global_vars';
+
+.category {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #bbbbbb;
+  margin: 30px auto 20px auto;
+  min-height: 215px;
+  padding-top: $category-padding-top-bottom;
+  padding-bottom: $category-padding-top-bottom;
+  width: $main-content-width;
+
+  .heading {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    color: #000000;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: $category-header-padding-bottom;
+
+    h3 {
+      font-weight: normal;
+      font-size: 0.7rem;
+      margin-left: 20px;
+      padding: 0px 0 10px 0;
+
+      a {
+        color: #0066cc;
+      }
+    }
+  }
+
+  .container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-content: space-between;
+    width: 100%;
+
+    li {
+      width: $category-li-width;
+      height: $category-li-height;
+      position: relative;
+
+      .thumbnail {
+        width: 100%;
+        height: auto;
+      }
+
+      .title {
+        color: #fff;
+        font-size: 1.5rem;
+        line-height: 23px;
+        position: absolute;
+        left: 50%; /* horizontal alignment */
+        top: 50%; /* vertical alignment */
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $main-content-width) {
+  .category {
+    width: ((3 * $category-li-width) + (2 * $category-li-separation));
+
+    .container {
+      height: (
+        (2 * $category-li-height) +
+        $category-li-separation);
+    }
+  }
+}
+
+@media screen and (max-width: 615px) {
+  .category {
+    width: ((2 * $category-li-width) + $category-li-separation);
+
+    .heading {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+
+      h3 {
+        margin: 0;
+      }
+
+      h2 {
+        padding-bottom: 10px;
+      }
+    }
+
+    .container {
+      height: (
+        (3 * $category-li-height) +
+        (2 * $category-li-separation));
+    }
+  }
+}
+
+
+@media screen and (max-width: 403px) {
+  .category {
+    display: block;
+    width: 100vw;
+
+    .container {
+      height: 100%;
+      overflow: hidden;
+
+      li {
+        width: 100%;
+        height: (((3 * $category-li-height) +
+        (2 * $category-li-separation)) / 6);
+
+        .thumbnail {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+@import 'client/components/App/global_vars';
+
+.tile {
+  @include genTile;
+
+  padding: 0;
+  width: 370px;
+  height: calc(300px - 40px - 40px);
+}
+
+@media screen and (max-width: 1100px) {
+  .tile {
+    display: none;
+  }
+}

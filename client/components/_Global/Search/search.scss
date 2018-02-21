@@ -1,0 +1,124 @@
+@import 'client/components/App/global_vars';
+
+.tile {
+  @include genTile;
+}
+
+.search {
+  position: relative; // important
+
+  .mag {
+    position: absolute;
+    top: 20px; // input padding
+    left: 20px;
+    width: 20px;
+  }
+
+  .searchInput {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    font-size: 16px;
+    color: #fff;
+    text-indent: 32px;
+    background-color:rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.36);
+    border-radius: 30px;
+
+    &::placeholder {
+      color: #ccc;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .list {
+    opacity: 0.96;
+    position: absolute; // important
+    z-index: 10;
+    top: 65px; // important
+    left: 0; // important
+    width: 100%;
+    max-width: 600px;
+    padding: 10px;
+    background: #fff;
+    border-radius: 30px;
+    border: 1px solid rgba(32, 72, 173, 0.36);
+    box-shadow: 0 4px 18px 4px rgba(0,0,0,0.2);
+
+    a {
+      outline: none;
+      text-decoration: none;
+
+      &:focus, &:hover {
+        text-decoration: underline;
+        // background: #ccc;
+      }
+    }
+
+    .listItem {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      font-size: 16px;
+      padding: 15px;
+
+      .itemLeft {
+        font-weight: bold;
+      }
+
+      .noItemsMessage {
+        color: #999;
+      }
+
+      .itemRight {
+        color: #aaa;
+      }
+    }
+
+    @include not-last-child('.listItem') {
+      border-bottom: 1px solid rgba(151, 151, 151, 0.3);
+    }
+  }
+}
+
+@media screen and (max-width: 785px) {
+  .list .listItem .itemRight {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .search {
+    .mag {
+      top: 14px;
+      left: 16px;
+      width: 16px;
+    }
+    .searchInput {
+      padding: 12px;
+      text-indent: 30px;
+    }
+    .list {
+      top: 48px;
+
+      .listItem {
+        font-size: 14px;
+        padding: 14px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 374px) {
+  .search {
+    .searchInput {
+      font-size: 12px;
+    }
+    .list .listItem {
+      font-size: 12px;
+    }
+  }
+}

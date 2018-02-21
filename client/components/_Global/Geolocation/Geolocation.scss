@@ -1,0 +1,23 @@
+@import 'client/components/App/global_vars';
+
+.geolocation {
+  font-size: 10px;
+  font-weight: bold;
+
+  .updateLocation {
+    padding-left: 10px;
+    text-transform: uppercase;
+    opacity: .5;
+    line-height: 12px;
+    vertical-align: top;
+    color: $header-link-color;
+  
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+@media screen and (max-width: 520px) {
+  
+}

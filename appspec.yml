@@ -1,0 +1,17 @@
+version: 0.0
+os: linux 
+files:
+  - source: /
+    destination: /home/ubuntu/CBS/deploy
+permissions:
+  - object: /home/ubuntu/CBS/deploy
+    pattern: "**"
+    owner: ubuntu
+    group: ubuntu
+hooks:
+  ApplicationStop:
+    - location: /devops/pre-setup.sh
+      runas: root
+  AfterInstall:
+    - location: devops/deploy.sh
+      runas: ubuntu

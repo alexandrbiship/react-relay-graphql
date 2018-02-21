@@ -1,0 +1,34 @@
+{
+  "category": [
+    {
+      "title": "News",
+      "url": "http://player.radio.com/station-directory/newstalk",
+      "image": "/assets/images/categories/news_img.png"
+    },
+    {
+      "title": "Sports",
+      "url": "http://player.radio.com/station-directory/sports",
+      "image": "/assets/images/categories/sports_img.png"
+    },
+    {
+      "title": "Pop",
+      "url": "http://player.radio.com/station-directory/pop",
+      "image": "/assets/images/categories/pop_img.png"
+    },
+    {
+      "title": "Country",
+      "url": "http://player.radio.com/station-directory/country",
+      "image": "/assets/images/categories/country_img.png"
+    },
+    {
+      "title": "Rock",
+      "url": "http://player.radio.com/station-directory/rock",
+      "image": "/assets/images/categories/rock_img.png"
+    },
+    {
+      "title": "Urban",
+      "url": "http://player.radio.com/station-directory/urban",
+      "image": "/assets/images/categories/urban_img.png"
+    }
+  ]
+}

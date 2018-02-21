@@ -1,0 +1,88 @@
+@import 'client/components/App/global_vars';
+
+.homeHero {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 370px;
+  background: url('assets/images/page_home/home_masthead.png');
+  background-size: cover;
+
+  .heroContent {
+    color: #fff;
+    width: 1240px;
+    display: flex;
+    flex-direction: row;
+    padding: 60px;
+
+    .heroLeft {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex: auto;
+
+      .radioLogo {
+        width: calc(#{$header-side-widths * 2}); // 342px;
+        height: calc(#{$header-cbs-logo-height * 2}); // 43px;
+      }
+
+      h1 {
+        font-size: 36px;
+        font-weight: 300;
+      }
+    }
+
+    .heroRight {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+
+      .geolocation {
+        margin-bottom: 25px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 815px) {
+  .homeHero .heroContent .heroLeft h1{
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .homeHero .heroContent {
+    flex-flow: column;
+    padding: 40px;
+
+    .heroLeft h1{
+      font-size: 22px;
+    }
+    .heroRight {
+      order: -1;
+      -webkit-order: -1;
+      -ms-order: -1;
+    }
+  }
+}
+
+@media screen and (max-width: 374px) {
+  .homeHero {
+    height: 340px;
+
+    .heroContent {
+      padding: 35px;
+
+      .heroLeft {
+        .radioLogo {
+          width: 100%;
+          height: inherit;
+        }
+
+        h1 {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}

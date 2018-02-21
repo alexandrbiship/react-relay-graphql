@@ -1,0 +1,6 @@
+@import 'client/components/App/global_vars';
+
+.tile {
+  @include genTile;
+  background: url('assets/images/page_home/rec_podcasts_bg.png');
+}

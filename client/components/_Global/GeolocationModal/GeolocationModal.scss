@@ -1,0 +1,69 @@
+.geolocationModal {
+  color: #202020;
+  text-transform: uppercase;
+  overflow-y: auto;
+
+  h2 {
+    color: #202020;
+    font-size: 16px;
+    padding-bottom: 15px;
+    padding-top:5px;
+    font-weight: 500;
+  }
+
+  button {
+    width: 100%;
+    padding: 10px;
+    border-width: 0px;
+    border-radius: 5px;
+    background: rgb(47,72,122);
+    background: -moz-radial-gradient(circle at 190px 68px, rgba(2,125,187,1) 0px, rgba(47,72,122,1) 250px, rgba(47,72,122,1) 100%);
+    background: -webkit-radial-gradient(circle at 190px 68px, rgba(2,125,187,1) 0px, rgba(47,72,122,1) 250px, rgba(47,72,122,1) 100%);
+    background: radial-gradient(circle at 190px 68px, rgba(2,125,187,1) 0px, rgba(47,72,122,1) 250px, rgba(47,72,122,1) 100%);
+    transition: all 0.3s ease;
+    color: #ffffff;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  h3 {
+    color: #202020;
+    padding: 16px 0 16px;
+    font-weight: 500;
+  }
+
+  .geolocationList {
+    overflow-y: scroll;
+    height: 420px;
+
+    ul {
+      font-weight:normal;
+      width: auto;
+
+      li {
+        margin: 5px;
+        padding: 10px 10px 10px 0;
+        background-color: #ffffff;
+        transition: opacity .2s ease-in-out;
+        display: block;
+        border-bottom: 1px solid #eeeeee;
+        border-bottom-color: radial-gradient(#fff, #999);
+        opacity: 1.0;
+
+        &:hover {
+          cursor: pointer;
+          opacity: 1.0;
+        }
+        &:not(:hover){
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+  @media screen and (max-height: 700px) {
+    .geolocationList {
+      height: 220px;
+    }
+  }
+}

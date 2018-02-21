@@ -1,0 +1,120 @@
+@import 'client/components/App/global_vars';
+
+$footer-li-width: 30px;
+$footer-social-link-width: 55px;
+$footer-social-link-size: ($footer-social-link-width / 2);
+$footer-social-gap: 5px;
+$footer-app-width: 190px;
+$footer-app-size: ($footer-app-width / 2);
+$footer-links-gap: 12px;
+$footer-radio-margin-bottom: 25px;
+$footer-radio-logo-width: 180px;
+
+.footer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  min-height: 215px;
+  background-color: #e4e4e4;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 60px;
+  padding-right: 60px;
+  margin-top: 10px;
+
+  .background {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: $main-content-width;
+    color: #999;
+    font-size: 11px;
+
+    .top {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: $footer-radio-margin-bottom;
+      
+      .radioLogo {
+        width: $footer-radio-logo-width;
+      }
+      
+      .share {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 3px;
+        width: ((3 * $footer-app-size) + (2 * $footer-social-gap));
+  
+        .social {
+          display: flex;
+          justify-content: space-between;
+          width: $footer-app-size;
+    
+          img {
+            width: $footer-social-link-size;
+          }
+        }
+    
+        .appIcons {
+          width: $footer-app-size;
+    
+          img {
+            width: $footer-app-size;
+          }
+        }
+      }
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+
+      .items {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 5px;
+        
+        li {
+          margin-right: 20px;
+          
+          a {
+            color: #999;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 748px) {
+  .footer {
+    .background {
+      .top {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: $footer-links-gap;
+
+        .radioLogo {
+          margin-bottom: $footer-radio-margin-bottom;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 602px) {
+  .footer {
+    .background {
+      .links {
+        .items {
+          flex-direction: column;
+          margin-bottom: $footer-links-gap;
+        }
+      }
+    }
+  }
+}

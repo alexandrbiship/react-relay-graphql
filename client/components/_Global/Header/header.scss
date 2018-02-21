@@ -1,0 +1,58 @@
+@import 'client/components/App/global_vars';
+
+.headerContainer {
+  position: fixed;
+  opacity: 0;
+  top: -($header-height);
+  z-index: 300;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: $header-height;
+  background-color: $header-background-color;
+  border-bottom: 1px solid #fff;
+  background: rgb(47,72,122);
+  background: -moz-radial-gradient(circle at 190px 68px, rgba(2,125,187,1) 0px, rgba(47,72,122,1) 250px, rgba(47,72,122,1) 100%);
+  background: -webkit-radial-gradient(circle at 190px 68px, rgba(2,125,187,1) 0px, rgba(47,72,122,1) 250px, rgba(47,72,122,1) 100%);
+  background: radial-gradient(circle at 190px 68px, rgba(2,125,187,1) 0px, rgba(47,72,122,1) 250px, rgba(47,72,122,1) 100%);
+  transition: all 0.3s ease;
+
+  .header {
+    color: $header-text;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 1240px;
+    padding-left: 60px;
+    padding-right: 60px;
+
+    .cbsLogo {
+      width: $header-side-widths;
+      height: $header-cbs-logo-height;
+    }
+
+    .geolocation {
+      text-align: right;
+    }
+  }
+}
+
+.showHeader {
+  position: fixed;
+  top: 0px;
+  opacity: 1;
+}
+
+@media screen and (max-width: 413px) {
+  .headerContainer .header .geolocation {
+    width: 100px;
+  }
+}
+
+@media screen and (max-width: 475px) {
+  .headerContainer .header {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}

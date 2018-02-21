@@ -1,0 +1,13 @@
+@import 'vars_categories';
+@import 'vars_header';
+@import 'vars_hr_line';
+@import 'vars_main_content';
+@import 'vars_section_header';
+@import 'vars_tiles';
+@import 'vars_media_item';
+
+@mixin not-last-child($selector) {
+  & #{$selector}:not(:last-child) {
+    @content;
+  }
+}

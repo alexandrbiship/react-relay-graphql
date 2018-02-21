@@ -1,0 +1,196 @@
+@import 'client/components/App/global_vars';
+.navigation {
+  position: absolute;
+  width: 100%;
+  z-index: 970;
+  font-family: "Helvetica Neue";
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 15px;
+  color: #fff;
+  .primary {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    .genres {
+      -moz-column-count: 3;
+      -moz-column-gap: 20px;
+      -webkit-column-count: 3;
+      -webkit-column-gap: 20px;
+      column-count: 3;
+      column-gap: 20px;
+    }
+    ul {
+      font-size: 0;
+      list-style-type: none;
+      float: right; // initial li
+      li {
+        text-transform: uppercase;
+        font-size: .8rem;
+        font-weight: 400;
+        display: inline-block;
+        padding: 15px;
+        &:hover,
+        a:hover {
+          color: rgb(182, 216, 228);
+        }
+        a {
+          font-size: 12px;
+          font-weight: 400;
+          line-height: 15px;
+          margin-left: 3px;
+          color: #fff;
+        }
+        i {
+          margin-left: 5px;
+          font-size: 14px;
+          font-weight: 700;
+        } // secondary ul
+        ul {
+          width: 100%;
+          position: absolute;
+          left: 0;
+          display: none;
+          opacity: 0;
+          animation: FadeOut 0.4s ease-in-out;
+        }
+        &:hover {
+          cursor: pointer;
+          &.stations:after,
+          &.stations:before,
+          &.podcasts:after,
+          &.podcasts:before {
+            border: solid transparent;
+            content: " ";
+            height: 0;
+            width: 0;
+            position: absolute;
+            pointer-events: none;
+            animation: FadeIn 0.4s ease-in-out;
+          }
+          &.stations:before,
+          &.podcasts:before {
+            border-bottom-color: rgba(24, 24, 24, 0.9);
+            border-width: 16px;
+            margin-left: 15px;
+          } // secondary ul visibility change
+          ul {
+            background: rgba(24, 24, 24, 0.9);
+            display: inline-flex;
+            /* shows sub-menu */
+            z-index: 970;
+            margin: 25px 0;
+            justify-content: center;
+            opacity: 1;
+            animation: FadeIn 0.4s ease-in-out;
+            padding: 25px 10%;
+            @keyframes FadeIn {
+              0% {
+                display: none;
+                opacity: 0;
+              }
+              1% {
+                display: block;
+                opacity: 0;
+              }
+              100% {
+                opacity: 1;
+              }
+            }
+            @keyframes FadeOut {
+              0% {
+                display: block;
+                opacity: 1;
+              }
+              99% {
+                display: block;
+                opacity: 0;
+              }
+              100% {
+                display: none;
+                opacity: 0;
+              }
+            } // secondary li
+            li {
+              width: 30%;
+              text-align: left;
+              a,
+              :hover {
+                color: #fff;
+                font-size: 16px;
+              }
+              h3 {
+                font-size: .5rem;
+                margin: -10px 0 -5px 0;
+                color: #ccc;
+                width: 100%;
+                &:hover {
+                  font-size: .5rem;
+                  margin: -10px 0 -5px 0;
+                  color: #ccc;
+                }
+              }
+              span {
+                text-transform: capitalize;
+                display: block;
+                text-align: left;
+                color: #FFFFFF;
+                font-size: 16px;
+                font-weight: 300;
+                line-height: 1.6rem;
+                padding: 5px 0 0 0;
+                &:hover,
+                a:hover {
+                  color: #00B0EE;
+                }
+              }
+              img {
+                width: 20px;
+                height: 20px;
+                padding: 3px;
+                margin-top: 3px;
+                vertical-align: sub;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 980px) {
+  .navigation {
+    display: none;
+  }
+}
+
+
+/* Desktops and laptops ----------- */
+
+@media only screen and (min-width: 768px) {
+  ul {
+    margin: 10px 27% 0 0;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  ul {
+    margin: 10px 23% 0 0;
+  }
+}
+
+@media only screen and (min-width: 1368px) {
+  ul {
+    margin: 10px 26% 0 0;
+  }
+}
+
+
+/* Desktops and laptops ----------- */
+
+@media only screen and (min-width: 1550px) {
+  ul {
+    margin: 10px 30% 0 0;
+  }
+}

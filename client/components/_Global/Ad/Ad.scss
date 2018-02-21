@@ -1,0 +1,44 @@
+@import 'client/components/App/global_vars';
+
+$ad-gap: 10px;
+
+.ad {
+
+  .adFrame {
+    margin-bottom: $ad-gap;
+    margin-top: $ad-gap;
+
+    hr {
+      background: radial-gradient(#dedede, #fff);
+      border: none;
+      height: 1px;
+    }
+  }
+
+  .billboard, .leaderboard {
+    margin: $ad-gap;
+  }
+
+  .rectangle {
+    padding: 27px;
+    border: 1px solid #bbbbbb;
+    width: 356px;
+    margin: $tile-gap;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .ad {
+    .billboard, .leaderboard, .rectangle {
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+  }
+}
+
+@media screen and (max-width: 374px) {
+  .ad .rectangle {
+    padding: 9px;
+    width: initial;
+  }
+}
